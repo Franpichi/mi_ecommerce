@@ -1,0 +1,22 @@
+<!-- views/product-details.hbs -->
+{{> header}}
+<h1>{{product.name}}</h1>
+<img src="{{product.imageUrl}}" alt="{{product.name}}" style="width:200px;">
+<p>{{product.description}}</p>
+<p>Price: ${{product.price}}</p>
+<button onclick="addToCart('{{product._id}}')">Add to Cart</button>
+
+<script>
+function addToCart(productId) {
+    fetch('/api/cart', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ productId, quantity: 1 })
+    })
+    .then(response => response.json())
+    .then(data => alert('Added to cart!'))
+    .catch(error => console.error('Error adding to cart:', error));
+}
+</script>

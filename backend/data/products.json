@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Reloj Clásico",
+        "price": 150,
+        "description": "Reloj elegante y atemporal, perfecto para cualquier ocasión.",
+        "category": "Clásico",
+        "imageUrl": "url_imagen",
+        "stock": 10
+    },
+    {
+        "name": "Reloj Deportivo",
+        "price": 200,
+        "description": "Ideal para los entusiastas del deporte con GPS integrado y resistencia al agua.",
+        "category": "Deportivo",
+        "imageUrl": "url_imagen",
+        "stock": 15
+    },
+    {
+        "name": "Reloj Smart",
+        "price": 300,
+        "description": "Un smartwatch con todas las funciones de última tecnología.",
+        "category": "Smart",
+        "imageUrl": "url_imagen",
+        "stock": 5
+    },
+    {
+        "name": "Reloj de Buceo",
+        "price": 250,
+        "description": "Resistente al agua hasta 300 metros, ideal para buceadores.",
+        "category": "Buceo",
+        "imageUrl": "url_imagen",
+        "stock": 8
+    },
+    {
+        "name": "Reloj de Aviador",
+        "price": 275,
+        "description": "Con funcionalidades específicas para pilotos.",
+        "category": "Aviador",
+        "imageUrl": "url_imagen",
+        "stock": 12
+    },
+    {
+        "name": "Reloj Minimalista",
+        "price": 120,
+        "description": "Diseño sencillo y moderno, ideal para el uso diario.",
+        "category": "Minimalista",
+        "imageUrl": "url_imagen",
+        "stock": 20
+    },
+    {
+        "name": "Reloj de Lujo",
+        "price": 500,
+        "description": "Reloj de alta gama con acabados premium y diseño exclusivo.",
+        "category": "Lujo",
+        "imageUrl": "url_imagen",
+        "stock": 5
+    },
+    {
+        "name": "Reloj Vintage",
+        "price": 180,
+        "description": "Estilo retro con encanto clásico, para los amantes de lo antiguo.",
+        "category": "Vintage",
+        "imageUrl": "url_imagen",
+        "stock": 10
+    },
+    {
+        "name": "Reloj Militar",
+        "price": 220,
+        "description": "Robusto y durable, diseñado para condiciones extremas.",
+        "category": "Militar",
+        "imageUrl": "url_imagen",
+        "stock": 7
+    },
+    {
+        "name": "Reloj con Compás",
+        "price": 200,
+        "description": "Incluye un compás integrado, ideal para aventureros y exploradores.",
+        "category": "Aventura",
+        "imageUrl": "url_imagen",
+        "stock": 15
+    },
+    {
+        "name": "Reloj con Fase Lunar",
+        "price": 300,
+        "description": "Muestra las fases lunares, para los aficionados a la astronomía.",
+        "category": "Astronómico",
+        "imageUrl": "url_imagen",
+        "stock": 6
+    },
+    {
+        "name": "Reloj con Alarma",
+        "price": 130,
+        "description": "Funcionalidad de alarma para mantenerte siempre puntual.",
+        "category": "Funcional",
+        "imageUrl": "url_imagen",
+        "stock": 25
+    },
+    {
+        "name": "Reloj de Diseñador",
+        "price": 350,
+        "description": "Creado por diseñadores famosos, un verdadero objeto de moda.",
+        "category": "Diseñador",
+        "imageUrl": "url_imagen",
+        "stock": 4
+    },
+    {
+        "name": "Reloj Ecológico",
+        "price": 160,
+        "description": "Fabricado con materiales sostenibles y ecológicos.",
+        "category": "Ecológico",
+        "imageUrl": "url_imagen",
+        "stock": 18
+    },
+    {
+        "name": "Reloj de Edición Limitada",
+        "price": 450,
+        "description": "Edición limitada con características únicas, para coleccionistas.",
+        "category": "Colección",
+        "imageUrl": "url_imagen",
+        "stock": 3
+    }
+]

@@ -1,0 +1,25 @@
+{{> header}}
+
+<h1>Productos en Tiempo Real</h1>
+<ul id="productList">
+    {{#each products}}
+    <li>{{this.name}} - ${{this.price}}</li>
+    {{/each}}
+</ul>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+
+    // Actualización de productos en tiempo real
+    socket.on('product-updated', function(product) {
+        var productList = document.getElementById('productList');
+        var productItem = document.createElement('li');
+        productItem.textContent = product.name + ' - $' + product.price;
+        productList.appendChild(productItem);
+    });
+
+    // Más código para manejar la interacción en tiempo real
+</script>
+
+{{> footer}}

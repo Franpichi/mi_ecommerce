@@ -1,0 +1,10 @@
+<!-- views/home.hbs -->
+{{> header}}
+<h1>Welcome to Our Ecommerce Store</h1>
+<ul>
+    {{#each products}}
+    <li>
+        <a href="/products/{{this._id}}">{{this.name}}</a> - ${{this.price}}
+    </li>
+    {{/each}}
+</ul>
