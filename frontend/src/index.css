@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 15;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,9 +18,11 @@ code {
 
 .footer {
   padding: 20px;
-  background-color: #333;
-  color: white;
+  background-color: #f8f8f8;
+  color: black;
   text-align: center;
+  border: 3px solid black;
+
 }
 
 .footer-content p {
@@ -36,6 +38,7 @@ code {
 .header {
   display: flex;
   justify-content: space-between;
+  border: 3px solid black;
   align-items: center;
   padding: 10px 50px;
   background-color: #f8f8f8;
@@ -163,7 +166,7 @@ code {
   margin-top: 8px; /* Ajusta este valor según tus necesidades */
 }
 /* En tu archivo CSS */
-.title {
+.title, .text {
   text-decoration: none;
   color: black;
   font-weight: bold;

@@ -17,7 +17,7 @@ function Header() {
 
             <div> 
                 <Link to="/" className="title">
-                    <h1 className="text-center text-2xl font-semibold">HOROLOGIUM</h1>
+                    <h1>HOROLOGIUM</h1>
                 </Link>
             </div>
 

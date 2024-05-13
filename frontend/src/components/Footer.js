@@ -3,14 +3,14 @@ import '../../src/index.css';  // Asegúrate de crear un archivo CSS para estili
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer text">
       <div className="footer-content">
-        <p>Contacto: info@tusitio.com</p>
-        <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
-        <div className="social-links">
-          <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <p>Contacto: horologium@horologium.com</p>
+        <p>© 2024 Franco Pizzichini Todos los derechos reservados.</p>
+        <div>
+          <a href="/" target="_blank" rel="noopener noreferrer" className="button-28">Facebook</a>
+          <a href="/" target="_blank" rel="noopener noreferrer" className="button-28">Twitter</a>
+          <a href="/" target="_blank" rel="noopener noreferrer" className="button-28">Instagram</a>
         </div>
       </div>
     </footer>
