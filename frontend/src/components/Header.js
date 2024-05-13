@@ -7,32 +7,34 @@ function Header() {
     const { state } = useCart();
     const { user, logout } = useAuth();
 
-    console.log("Usuario en el Header:", user); // Verifica que el usuario esté definido aquí
-
     return (
-        <header className="header">
-            <div className="logo">
+        <header className="header flex items-center justify-between py-4 px-6">
+            <div className="logo flex items-center">
                 <Link to="/">
-                    <img src="logo_url_here" alt="Logo" />
+                    <img src="https://res.cloudinary.com/dipbwzqab/image/upload/v1715633367/Horologium/Logo_lwzsq9.png" alt="Logo" className="h-12" />
                 </Link>
             </div>
-            <div className="header-links">
+
+            <div> 
+                <Link to="/" className="title">
+                    <h1 className="text-center text-2xl font-semibold">HOROLOGIUM</h1>
+                </Link>
+            </div>
+
+            <div className="flex items-center space-x-4">
                 {user ? (
                     <>
-                        <span>{user.email}</span> 
-                        <button onClick={logout}>Logout</button>
+                        <span className='button-28'>{user.email}</span>
+                        <button onClick={logout} className="button-28">Cerrar Sesion</button>
                     </>
                 ) : (
-                    <Link to="/login">Iniciar Sesión</Link> /* Muestra el botón de inicio de sesión */
+                    <Link to="/login" className="button-28">Iniciar Sesión</Link>
                 )}
-                <Link to="/cart">Carrito ({state.items.length})</Link>
+                <Link to="/cart" className="flex items-center ml-4">
+                    <img src="https://res.cloudinary.com/dipbwzqab/image/upload/v1715631959/Horologium/carrito-de-compras_oku36b.png" alt="cart" width={40} height={40} className="h-12 pt-16" />
+                    <span className="ml-1 button-28">{state.items.length}</span>
+                </Link>
             </div>
-            <nav className="main-nav">
-                <Link to="/">Home</Link>
-                <Link to="/product">Productos</Link>
-                <Link to="/about">Acerca De</Link>
-                <Link to="/contact">Contacto</Link>
-            </nav>
         </header>
     );
 }

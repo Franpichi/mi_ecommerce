@@ -25,7 +25,7 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 function App() {
   return (
     <Router>
-      <NavigationProvider>  // NavigationProvider está ahora fuera y envuelve a todos los demás Providers
+      <NavigationProvider> 
         <CartProvider>
           <AuthProvider>
             <Header />

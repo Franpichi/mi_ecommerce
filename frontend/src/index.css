@@ -11,6 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.imgCart {
+  margin-right: 2px;
+}
+
 .footer {
   padding: 20px;
   background-color: #333;
@@ -27,12 +32,21 @@ code {
   color: white;
   text-decoration: none;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 50px;
   background-color: #f8f8f8;
+  margin-top: 10px;
+}
+
+.title {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
 }
 
 .logo img {
@@ -60,4 +74,107 @@ code {
   text-decoration: none;
   color: #555;
   font-size: 16px;
+}
+
+.button-27 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 15px;
+  min-height: 20px;
+  min-width: 0;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 40%;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.button-28 {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 15px;
+  min-height: 20px;
+  min-width: 0;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.cart-img {
+  margin-top: 8px; /* Ajusta este valor según tus necesidades */
+}
+/* En tu archivo CSS */
+.title {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: larger;
+  font-family: 'Lobster', cursive; /* Aplica la fuente Lobster */
+}
+
+.horologium-title {
+  font-family: 'Lobster', cursive; /* Fuente Lobster */
+  font-size: 2.5rem; /* Ajusta el tamaño de la fuente según tu preferencia */
+  font-weight: 400; /* Peso de la fuente para un aspecto más elegante */
+  text-align: center; /* Centrar el texto */
+  color: #333; /* Ajusta el color según tu preferencia */
 }
