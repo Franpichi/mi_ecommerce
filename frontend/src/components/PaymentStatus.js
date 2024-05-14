@@ -80,8 +80,8 @@ const PaymentStatus = () => {
     <div>
       {success ? (
         <>
-          <h2>Compra exitosa</h2>
-          <p>¿Quieres un e-ticket de tu compra? Déjanos tu email</p>
+          <h2 className='horologium-title'>Compra exitosa</h2>
+          <p className='title'>¿Quieres un e-ticket de tu compra? Déjanos tu email</p>
           <input
             type="email"
             value={email}
@@ -91,7 +91,7 @@ const PaymentStatus = () => {
           <button onClick={handleEmailSubmit}>Enviar</button>
         </>
       ) : (
-        <h2>Compra denegada</h2>
+        <h2 className='horologium-title'>Compra denegada</h2>
       )}
     </div>
   );

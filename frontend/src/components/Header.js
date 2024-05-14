@@ -9,15 +9,11 @@ function Header() {
 
     return (
         <header className="header flex items-center justify-between py-4 px-6">
-            <div className="logo flex items-center">
-                <Link to="/">
-                    <img src="https://res.cloudinary.com/dipbwzqab/image/upload/v1715633367/Horologium/Logo_lwzsq9.png" alt="Logo" className="h-12" />
-                </Link>
-            </div>
 
-            <div> 
+
+            <div className='logo'> 
                 <Link to="/" className="title">
-                    <h1>HOROLOGIUM</h1>
+                <img src="https://res.cloudinary.com/dipbwzqab/image/upload/v1715707747/Horologium/Horo-2_yv80do.png" alt="Horologium" />
                 </Link>
             </div>
 

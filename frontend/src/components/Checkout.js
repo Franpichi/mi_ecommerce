@@ -41,7 +41,7 @@ function Checkout() {
   };
 
   return (
-    <div>
+    <div className="checkout-container">
       <h2>Checkout</h2>
       <input type="text" placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)} required />
       <button onClick={handleCheckout} disabled={processing}>

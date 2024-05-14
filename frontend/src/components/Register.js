@@ -45,22 +45,23 @@ function Register() {
     };
 
     return (
-        <div>
-            <h2>Register</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Email:
-                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} required />
-                </label>
-                <label>
-                    Password:
-                    <input type="password" value={password} onChange={e => setPassword(e.target.value)} required />
-                </label>
-                <button type="submit">Register</button>
-            </form>
-            <ToastContainer />
+        <div className="login-container">
+          <h2 className='horologium-title'>Register</h2>
+          <form onSubmit={handleSubmit} className="login-form">
+            <label className='login-label title'>
+              Email:
+              <input className="login-input" type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+            </label>
+            <label className='login-label title'>
+              Password:
+              <input className="login-input" type="password" value={password} onChange={e => setPassword(e.target.value)} required />
+            </label>
+            <button className='button-28' type="submit">Register</button>
+          </form>
+          <ToastContainer />
         </div>
-    );
-}
+      );
+    }
+
 
 export default Register;

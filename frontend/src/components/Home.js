@@ -25,12 +25,13 @@ function Home() {
   };
 
   return (
-    <div>
+      <div className="flex-container" style={{ paddingLeft: '120px' }}>
       {products.map(product => (
-        <div key={product._id}>
-          <h3>{product.name}</h3>
+        <div key={product._id} className="product-item">
+          <h3 className='title'>{product.name}</h3>
+          <img src={product.imageUrl} alt={product.name} width="300" height="300" />
           <p>{product.description}</p>
-          <button onClick={() => addToCart(product)}>Add to Cart</button>
+          <button className='button-28' onClick={() => addToCart(product)}>Agregar al carrito</button>
         </div>
       ))}
     </div>

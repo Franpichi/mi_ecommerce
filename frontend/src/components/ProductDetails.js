@@ -6,7 +6,7 @@ function ProductDetails() {
   const { dispatch } = useCart();
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/products/:id') // Reemplaza :id con el ID real del producto
+    fetch('http://localhost:3001/api/products/:id') 
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -25,10 +25,10 @@ function ProductDetails() {
     dispatch({
       type: 'ADD_ITEM',
       payload: {
-        id: product.id, // Reemplaza con el ID real del producto
+        id: product.id,
         name: product.name,
         price: product.price,
-        quantity: 1 // Por defecto, puedes cambiar si es necesario
+        quantity: 1 
       }
     });
   };
@@ -39,7 +39,7 @@ function ProductDetails() {
         <div>
           <h2>{product.name}</h2>
           <p>{product.description}</p>
-          <button onClick={addToCart}>Add to Cart</button>
+          <button onClick={addToCart}> to Cart</button>
         </div>
       ) : (
         <p>Loading...</p>

@@ -4,7 +4,7 @@
         "price": 150,
         "description": "Reloj elegante y atemporal, perfecto para cualquier ocasión.",
         "category": "Clásico",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703871/Horologium/Relojes/1-Reloj-Clasico_lzrgzq.webp",
         "stock": 10
     },
     {
@@ -12,7 +12,7 @@
         "price": 200,
         "description": "Ideal para los entusiastas del deporte con GPS integrado y resistencia al agua.",
         "category": "Deportivo",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703871/Horologium/Relojes/2-Reloj-Deportivo_jgmlxs.webp",
         "stock": 15
     },
     {
@@ -20,7 +20,7 @@
         "price": 300,
         "description": "Un smartwatch con todas las funciones de última tecnología.",
         "category": "Smart",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703872/Horologium/Relojes/3-Reloj-Smart_ozyfwz.webp",
         "stock": 5
     },
     {
@@ -28,7 +28,7 @@
         "price": 250,
         "description": "Resistente al agua hasta 300 metros, ideal para buceadores.",
         "category": "Buceo",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715704036/Horologium/Relojes/4-Reloj-Buceo_sojbfd.webp",
         "stock": 8
     },
     {
@@ -36,7 +36,7 @@
         "price": 275,
         "description": "Con funcionalidades específicas para pilotos.",
         "category": "Aviador",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703872/Horologium/Relojes/5-Reloj-Aviador_zqmgts.webp",
         "stock": 12
     },
     {
@@ -44,7 +44,7 @@
         "price": 120,
         "description": "Diseño sencillo y moderno, ideal para el uso diario.",
         "category": "Minimalista",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703872/Horologium/Relojes/6-Reloj-Minimalista_sxx2r9.webp",
         "stock": 20
     },
     {
@@ -52,7 +52,7 @@
         "price": 500,
         "description": "Reloj de alta gama con acabados premium y diseño exclusivo.",
         "category": "Lujo",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703904/Horologium/Relojes/7-Reloj-Lujo_zhwsz8.webp",
         "stock": 5
     },
     {
@@ -60,7 +60,7 @@
         "price": 180,
         "description": "Estilo retro con encanto clásico, para los amantes de lo antiguo.",
         "category": "Vintage",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703891/Horologium/Relojes/8-Reloj-Vintage_kpj4ga.webp",
         "stock": 10
     },
     {
@@ -68,7 +68,7 @@
         "price": 220,
         "description": "Robusto y durable, diseñado para condiciones extremas.",
         "category": "Militar",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703906/Horologium/Relojes/9-Reloj-Militar_yjg6qa.webp",
         "stock": 7
     },
     {
@@ -76,7 +76,7 @@
         "price": 200,
         "description": "Incluye un compás integrado, ideal para aventureros y exploradores.",
         "category": "Aventura",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703903/Horologium/Relojes/10-Reloj-Compas_g1nxsu.webp",
         "stock": 15
     },
     {
@@ -84,7 +84,7 @@
         "price": 300,
         "description": "Muestra las fases lunares, para los aficionados a la astronomía.",
         "category": "Astronómico",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703905/Horologium/Relojes/11-Reloj-Lunar_wstt0r.webp",
         "stock": 6
     },
     {
@@ -92,7 +92,7 @@
         "price": 130,
         "description": "Funcionalidad de alarma para mantenerte siempre puntual.",
         "category": "Funcional",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703903/Horologium/Relojes/12-Reloj-Alarma_nj0gpf.webp",
         "stock": 25
     },
     {
@@ -100,7 +100,7 @@
         "price": 350,
         "description": "Creado por diseñadores famosos, un verdadero objeto de moda.",
         "category": "Diseñador",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703903/Horologium/Relojes/12-Reloj-Alarma_nj0gpf.webp",
         "stock": 4
     },
     {
@@ -108,7 +108,7 @@
         "price": 160,
         "description": "Fabricado con materiales sostenibles y ecológicos.",
         "category": "Ecológico",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715703904/Horologium/Relojes/14-Reloj-Ecologico_qokdjw.webp",
         "stock": 18
     },
     {
@@ -116,7 +116,7 @@
         "price": 450,
         "description": "Edición limitada con características únicas, para coleccionistas.",
         "category": "Colección",
-        "imageUrl": "url_imagen",
+        "imageUrl": "https://res.cloudinary.com/dipbwzqab/image/upload/v1715704036/Horologium/Relojes/15-Relooj-Limitada_lctnxn.webp",
         "stock": 3
     }
 ]

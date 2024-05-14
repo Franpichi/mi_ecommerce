@@ -263,6 +263,7 @@ const CheckoutForm = () => {
 
 export default CheckoutForm;
  */
+// CheckoutForm.js
 
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
@@ -334,10 +335,28 @@ const CheckoutForm = () => {
     }
   };
 
+  const cardElementOptions = {
+    style: {
+      base: {
+        color: '#32325d',
+        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontSmoothing: 'antialiased',
+        fontSize: '16px',
+        '::placeholder': {
+          color: '#aab7c4'
+        }
+      },
+      invalid: {
+        color: '#fa755a',
+        iconColor: '#fa755a'
+      }
+    }
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-      <CardElement />
-      <button type="submit" disabled={!stripe || loading}>{loading ? 'Processing...' : 'Pay'}</button>
+    <form onSubmit={handleSubmit} className="checkout-form">
+      <CardElement options={cardElementOptions} />
+      <button className='button-27' type="submit" disabled={!stripe || loading}>{loading ? 'Processing...' : 'Pay'}</button>
     </form>
   );
 };

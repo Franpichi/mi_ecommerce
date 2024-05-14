@@ -69,3 +69,6 @@ error: Login failed {"error":null,"info":{"message":"User not found"},"timestamp
 warn: Attempt to register with existing email {"email":"francopizzichini15@gmail.com","timestamp":"2024-05-12T20:29:08.072Z"}
 info: User registered successfully {"email":"franpizzichini@gmail.com","timestamp":"2024-05-12T20:29:20.120Z"}
 error: Register Error {"email":"franpizzichini@gmail.com","error":"E11000 duplicate key error collection: test.users index: email_1 dup key: { email: \"franpizzichini@gmail.com\" }","timestamp":"2024-05-12T20:29:20.276Z"}
+warn: Login attempt failed {"info":{"message":"User not found"},"timestamp":"2024-05-14T18:34:22.790Z"}
+warn: Login attempt failed {"info":{"message":"User not found"},"timestamp":"2024-05-14T18:34:42.627Z"}
+info: User registered successfully {"email":"franpizzichini@gmail.com","timestamp":"2024-05-14T18:34:54.781Z"}

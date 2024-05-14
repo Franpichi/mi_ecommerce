@@ -38,11 +38,11 @@ function AdminPanel() {
 
     return (
         <div>
-            <h1>Admin Panel</h1>
+            <h1 className='horologium-title'>Admin Panel</h1>
             <ul>
                 {users.map(user => (
                     <li key={user._id}>
-                        {user.email} - <button onClick={() => handleDelete(user._id)}>Delete</button>
+                        {user.email} - <button className='button-28' onClick={() => handleDelete(user._id)}>Delete</button>
                     </li>
                 ))}
             </ul>

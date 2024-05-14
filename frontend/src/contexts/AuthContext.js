@@ -1,5 +1,3 @@
-// AuthContext.js
-
 import React, { createContext, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from './CartContext';
@@ -28,7 +26,7 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem('user', JSON.stringify({ ...data, email }));
                 localStorage.setItem('token', data.token);
                 navigate(data.role === 'admin' ? '/admin' : '/');
-                toast.success('Sesión iniciada correctamente'); // Confirma que la sesión ha sido iniciada
+                toast.success('Sesión iniciada correctamente');
             } else {
                 toast.error(data.message || 'Acceso denegado');
             }
@@ -43,7 +41,7 @@ export const AuthProvider = ({ children }) => {
         clearCart();
         setUser(null);
         navigate('/login');
-        toast.info('Sesión cerrada'); // Confirma que la sesión ha sido cerrada
+        toast.info('Sesión cerrada');
     };
 
     return (

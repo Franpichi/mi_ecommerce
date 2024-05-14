@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EBEBEB;
+
 }
 
 code {
@@ -18,10 +20,9 @@ code {
 
 .footer {
   padding: 20px;
-  background-color: #f8f8f8;
+  background-color: #DDDDDD;
   color: black;
   text-align: center;
-  border: 3px solid black;
 
 }
 
@@ -38,12 +39,26 @@ code {
 .header {
   display: flex;
   justify-content: space-between;
-  border: 3px solid black;
   align-items: center;
+  background-color: #DDDDDD;
   padding: 10px 50px;
-  background-color: #f8f8f8;
   margin-top: 10px;
 }
+
+/* src/styles/global.css */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.product-item {
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+}
+
 
 .title {
   text-decoration: none;
@@ -51,6 +66,8 @@ code {
   font-weight: bold;
   font-size: larger;
 }
+
+
 
 .logo img {
   height: 50px;
@@ -65,6 +82,12 @@ code {
   text-decoration: none;
   color: #333;
 }
+
+.main{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  }
 
 .main-nav {
   width: 100%;
@@ -181,3 +204,120 @@ code {
   text-align: center; /* Centrar el texto */
   color: #333; /* Ajusta el color según tu preferencia */
 }
+
+/* src/styles/global.css */
+
+/* Contenedor principal para centrar el formulario */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo del formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo de las etiquetas del formulario */
+.login-label {
+  width: 100%; /* Para que los inputs ocupen todo el ancho disponible */
+  text-align: left;
+}
+
+/* Estilo de los inputs del formulario */
+.login-input {
+  width: 100%; /* Para que el input ocupe todo el ancho del contenedor */
+  border: 2px solid black;
+  box-sizing: border-box; /* Incluye el padding dentro del ancho */
+}
+
+/* Estilo del botón */
+.button-28 {
+  margin-top: 20px;
+}
+/* src/styles/global.css */
+
+/* Contenedor principal para centrar el formulario */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ajusta según tu diseño */
+}
+
+/* Estilo del formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo de las etiquetas del formulario */
+.login-label {
+  margin-bottom: 15px;
+  width: 100%; /* Para que los inputs ocupen todo el ancho disponible */
+  text-align: left;
+}
+
+/* Estilo de los inputs del formulario */
+.login-input {
+  width: 100%; /* Para que el input ocupe todo el ancho del contenedor */
+  padding: 8px;
+  margin-top: 5px; /* Espacio entre el label y el input */
+  box-sizing: border-box; /* Incluye el padding dentro del ancho */
+}
+
+/* Estilo del botón */
+.button-28 {
+  margin-top: 20px;
+}
+
+/* Estilo de los items del carrito */
+.cart-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Contenedor para cuando el carrito está vacío */
+.empty-cart {
+  text-align: center;
+}
+
+/* Estilo para las acciones del carrito */
+.cart-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+/* Para evitar que los botones del carrito suban */
+.footer-space {
+  margin-top: auto;
+}
+/* src/styles/global.css */
+
+/* Contenedor del formulario de checkout */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Estilo del CardElement */
+.StripeElement {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
