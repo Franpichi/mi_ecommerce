@@ -1,4 +1,4 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+/* const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -37,5 +37,39 @@ exports.processPayment = async (req, res, next) => {
     });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
+  }
+};
+ */
+
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
+exports.processPayment = async (req, res) => {
+  try {
+    const { amount, paymentMethodId } = req.body;
+
+    if (!amount || !paymentMethodId) {
+      return res.status(400).json({ success: false, message: 'Amount and payment method ID are required.' });
+    }
+
+    // Crear el Intento de Pago con automatic_payment_methods habilitado
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: amount,
+      currency: 'usd',
+      payment_method: paymentMethodId,
+      automatic_payment_methods: { enabled: true }, // Habilitar automatic_payment_methods
+      // Agregar return_url para redireccionamiento en caso necesario
+      return_url: 'http://localhost:3000/payment-status'
+    });
+
+    if (paymentIntent.status === 'requires_action') {
+      return res.json({ success: true, requiresAction: true, clientSecret: paymentIntent.client_secret });
+    } else if (paymentIntent.status === 'succeeded') {
+      return res.status(200).json({ success: true, message: 'Payment processed successfully.' });
+    } else {
+      throw new Error('Payment did not complete successfully.');
+    }
+  } catch (error) {
+    console.error('Error processing payment:', error);
+    return res.status(500).json({ success: false, message: 'Error processing payment: ' + error.message });
   }
 };

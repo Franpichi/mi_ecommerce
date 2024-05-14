@@ -152,7 +152,6 @@ function Cart() {
 
 export default Cart;
  */
-
 import React, { useState, useEffect } from 'react';
 import { useCart } from '../contexts/CartContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -170,7 +169,7 @@ function Cart() {
     const totalAmount = items.reduce((acc, item) => {
       const price = parseFloat(item.price) || 0;
       const quantity = parseInt(item.quantity) || 0;
-      console.log(`Item: ${item.name}, Price: ${price}, Quantity: ${quantity}`);
+      console.log(`Item: ${item.name}, Price: ${price}, Quantity: ${quantity}, Image URL: ${item.imageUrl}`);
       return acc + (price * quantity);
     }, 0);
     console.log(`Total Amount: ${totalAmount}`);
@@ -201,6 +200,11 @@ function Cart() {
         {items.map((item, index) => (
           <div key={item.id || index} className="cart-item">
             <h4 className='title'>{item.name}</h4>
+            {item.imageUrl ? (
+              <img src={item.imageUrl} alt={item.name} width="300" height="300" onError={(e) => e.target.style.display='none'} />
+            ) : (
+              <p>No hay imagen disponible</p>
+            )}
             <p className='title'>Precio: ${item.price ? parseFloat(item.price).toFixed(2) : '0.00'} x {item.quantity || 0}</p>
             <button className="button-28" onClick={() => removeFromCart(item)}>Vaciar el Carrito</button>
           </div>
