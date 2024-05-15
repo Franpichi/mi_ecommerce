@@ -1,6 +1,6 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const User = require('../models/User');  // Asegúrate de que la ruta sea correcta
+const User = require('../models/User');
 
 module.exports = function(passport) {
   passport.use(new LocalStrategy({ usernameField: 'email' }, async (email, password, done) => {

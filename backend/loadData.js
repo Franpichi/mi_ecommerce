@@ -1,28 +1,23 @@
-require('dotenv').config();  // Asegura que las variables de entorno desde `.env` son leídas
-const mongoose = require('mongoose');
+require('dotenv').config(); 
 const fs = require('fs');
 const path = require('path');
-const Product = require('./models/Product');  // Asegúrate de que la ruta al modelo es correcta
-const User = require('./models/User');        // Asume la ruta correcta al modelo de usuario
-const bcrypt = require('bcryptjs');           // Necesario para hashear las contraseñas de los usuarios
-const connectDB = require('./config/db');     // Asume que existe una función para conectar a DB
+const Product = require('./models/Product');  
+const User = require('./models/User');       
+const bcrypt = require('bcryptjs');          
+const connectDB = require('./config/db');   
 
-// Se asume que 'connectDB' maneja la conexión usando 'MONGO_URI' desde '.env'
 connectDB();
 
 const importData = async () => {
     try {
-        // Limpieza de colecciones
         await Product.deleteMany();
         await User.deleteMany();
 
-        // Carga de productos
         const productsData = fs.readFileSync(path.join(__dirname, 'data', 'products.json'), 'utf8');
         const products = JSON.parse(productsData);
         await Product.insertMany(products);
         console.log('Products Imported Successfully!');
 
-        // Carga de usuarios
         const usersData = fs.readFileSync(path.join(__dirname, 'data', 'users.json'), 'utf8');
         const users = JSON.parse(usersData);
         for (const user of users) {

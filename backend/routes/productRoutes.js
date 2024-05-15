@@ -3,10 +3,8 @@ const router = express.Router();
 const Product = require('../models/Product');
 const ProductController = require('../controllers/productController');
 
-// Endpoint para obtener todos los productos
 router.get('/', ProductController.getAllProducts);
 
-// Endpoint para agregar un nuevo producto
 router.post('/', async (req, res) => {
   const product = new Product({
     name: req.body.name,
@@ -25,10 +23,8 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Endpoint para actualizar un producto existente
 router.put('/:productId', ProductController.updateProduct);
 
-// Endpoint para eliminar un producto
 router.delete('/:productId', async (req, res) => {
   try {
     await Product.findByIdAndDelete(req.params.productId);

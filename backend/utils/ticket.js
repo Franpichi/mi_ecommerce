@@ -1,6 +1,3 @@
-// utils/ticket.js
-
-// Función para generar el ticket de compra
 const generateTicket = (cart) => {
     let ticket = '<h2>Ticket de compra</h2>';
     cart.forEach(item => {

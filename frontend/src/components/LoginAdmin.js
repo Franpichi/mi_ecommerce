@@ -11,10 +11,10 @@ function LoginAdmin() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const user = await login(email, password, true); // Pass a flag to identify admin login
+        const user = await login(email, password, true); 
 
         if (user && user.role === 'admin') {
-            navigate('/admin-panel');  // Redirige al panel de administración
+            navigate('/admin-panel'); 
         } else {
             toast.error("Acceso denegado. Solo los administradores pueden acceder.");
         }

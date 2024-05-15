@@ -5,7 +5,7 @@ exports.sendEmail = async (emailDetails) => {
   try {
     const msg = {
       to: emailDetails.toEmail,
-      from: 'your-email@example.com',  // Use the email address verified with your SendGrid account
+      from: 'francopizzichini15@gmail.com',
       subject: emailDetails.subject,
       text: emailDetails.text,
       html: emailDetails.html,

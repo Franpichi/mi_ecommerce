@@ -4,7 +4,7 @@ const bcrypt = require('bcryptjs');
 const UserSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  role: { type: String, default: 'user' }  // Agrega el campo 'role' con valor por defecto 'user'
+  role: { type: String, default: 'user' } 
 });
 
 UserSchema.pre('save', async function(next) {

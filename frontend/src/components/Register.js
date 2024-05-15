@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';  // Importa useNavigate en lugar de useHistory
-import { toast, ToastContainer } from 'react-toastify';  // Importa los componentes de react-toastify
-import 'react-toastify/dist/ReactToastify.css';  // Importa el CSS para los toast
+import { useNavigate } from 'react-router-dom';  
+import { toast, ToastContainer } from 'react-toastify';  
+import 'react-toastify/dist/ReactToastify.css';  
 
 function Register() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate();  // Utiliza useNavigate en lugar de useHistory
+    const navigate = useNavigate();  
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,8 +29,8 @@ function Register() {
                 progress: undefined,
             });
             setTimeout(() => {
-                navigate('/login');  // Utiliza navigate para redireccionar a la página de login
-            }, 5000);  // Espera 5 segundos antes de redirigir
+                navigate('/login'); 
+            }, 5000);  
         } else {
             toast.error(`Registration failed: ${data.message}`, {
                 position: "top-center",

@@ -1,6 +1,5 @@
 const Product = require('../models/Product');
 
-// Obtener todos los productos con filtrado, paginación y ordenamiento
 exports.getAllProducts = async (req, res, next) => {
     try {
         const page = parseInt(req.query.page) || 1;
@@ -11,7 +10,6 @@ exports.getAllProducts = async (req, res, next) => {
 
         let filter = {};
 
-        // Aplicar filtros si están presentes en la consulta
         if (req.query.category) {
             filter.category = req.query.category;
         }
@@ -33,7 +31,6 @@ exports.getAllProducts = async (req, res, next) => {
     }
 };
 
-// Obtener un producto por su ID
 exports.getProductById = async (req, res, next) => {
     try {
         const productId = req.params.id;
@@ -47,7 +44,6 @@ exports.getProductById = async (req, res, next) => {
     }
 };
 
-// Crear un nuevo producto
 exports.createProduct = async (req, res, next) => {
     try {
         const { name, price, description, category, imageUrl, stock } = req.body;
@@ -66,7 +62,6 @@ exports.createProduct = async (req, res, next) => {
     }
 };
 
-// Actualizar un producto existente
 exports.updateProduct = async (req, res, next) => {
     try {
         const productId = req.params.id;

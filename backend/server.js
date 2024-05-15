@@ -55,7 +55,7 @@ app.post('/send-email', async (req, res) => {
 
   const message = {
     to: email,
-    from: 'tu-email@example.com', // Reemplaza con tu email verificado en SendGrid
+    from: 'francopizzichini15@gmail.com',
     subject: 'Compra exitosa',
     html: `
       <h1>Detalle de tu compra</h1>
@@ -87,12 +87,12 @@ app.post('/api/payment', async (req, res) => {
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: Math.round(amount * 100), // Stripe expects the amount in cents
+      amount: Math.round(amount * 100), 
       currency: 'usd',
       payment_method: paymentMethodId,
       confirmation_method: 'manual',
       confirm: true,
-      return_url: 'http://localhost:3000/payment-status', // Asegúrate de cambiar esto en producción
+      return_url: 'http://localhost:3000/payment-status',
       automatic_payment_methods: {
         enabled: true,
         allow_redirects: 'never'

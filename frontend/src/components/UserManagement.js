@@ -29,7 +29,7 @@ function UserManagement() {
 
       const data = await response.json();
       if (response.ok) {
-        setUsers([...users, data]); // Actualiza la lista de usuarios con el nuevo usuario
+        setUsers([...users, data]); 
         setNewUser({ email: '', password: '', role: 'user' });
         toast.success('User added successfully!');
       } else if (response.status === 409) {

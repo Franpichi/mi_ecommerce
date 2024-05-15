@@ -1,49 +1,9 @@
-/* import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-
-const PaymentStatus = () => {
-  const location = useLocation();
-  const { success } = location.state;
-  const [email, setEmail] = useState('');
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleEmailSubmit = () => {
-    // Lógica para manejar el envío de email
-    alert(`Email guardado: ${email}`);
-  };
-
-  return (
-    <div>
-      {success ? (
-        <>
-          <h2>Compra exitosa</h2>
-          <input
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="Ingrese su email"
-          />
-          <button onClick={handleEmailSubmit}>Guardar Email</button>
-        </>
-      ) : (
-        <h2>Compra denegada</h2>
-      )}
-    </div>
-  );
-};
-
-export default PaymentStatus;
- */
-
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const PaymentStatus = () => {
   const location = useLocation();
-  const { success, cartItems } = location.state; // Asumiendo que pasas los items del carrito también
+  const { success, cartItems } = location.state; 
   const [email, setEmail] = useState('');
 
   const handleEmailChange = (e) => {

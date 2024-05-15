@@ -1,4 +1,3 @@
-// En src/contexts/NavigationContext.js
 import React, { createContext, useContext, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 

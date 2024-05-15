@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../src/index.css';  // Asegúrate de crear un archivo CSS para estilizar el header
+import '../../src/index.css'; 
 
 function Footer() {
   return (

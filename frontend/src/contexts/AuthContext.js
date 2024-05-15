@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
             if (response.ok) {
                 if (isAdminLogin && data.user.role !== 'admin') {
                     toast.error("Acceso denegado. Solo los administradores pueden acceder.");
-                    return null; // No actualizar el estado si no es administrador
+                    return null; 
                 }
 
                 setUser({ ...data.user, email });
@@ -32,7 +32,6 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem('token', data.token);
                 toast.success('Sesión iniciada correctamente');
                 
-                // Redirigir a la ruta correcta después de iniciar sesión
                 navigate(data.role === 'admin' ? '/admin-panel' : '/home');
                 return data.user; // Devuelve el usuario completo
             } else {

@@ -29,7 +29,7 @@ function Home() {
         name: product.name,
         price: product.price,
         imageUrl: product.imageUrl,
-        quantity: 1 // Asegurándonos de incluir la cantidad
+        quantity: 1 
       }
     });
   };

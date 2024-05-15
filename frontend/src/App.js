@@ -18,7 +18,7 @@ import PrivateRoute from './components/PrivateRoute';
 import AdminPanel from './components/AdminPanel';
 import SomePrivateComponent from './components/SomePrivateComponent';
 import CheckoutForm from './components/CheckoutForm';
-import PaymentStatus from './components/PaymentStatus'; // Asegúrate de importar PaymentStatus
+import PaymentStatus from './components/PaymentStatus'; 
 import LoginAdmin from './components/LoginAdmin';
 import UserManagement from './components/UserManagement';
 import ProductManagement from './components/ProductManagement';

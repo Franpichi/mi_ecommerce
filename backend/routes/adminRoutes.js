@@ -1,4 +1,3 @@
-// backend/routes/adminRoutes.js
 const express = require('express');
 const router = express.Router();
 const { createUser, deleteUser, listUsers, createProduct, deleteProduct } = require('../controllers/adminController');

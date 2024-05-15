@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Navigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext'; // Asegúrate de haber creado y exportado este contexto
+import { useAuth } from '../contexts/AuthContext';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user } = useAuth(); // Usamos el hook personalizado para acceder al estado de autenticación
+    const { user } = useAuth(); 
 
     return (
         <Route
@@ -12,7 +12,6 @@ const PrivateRoute = ({ children, ...rest }) => {
                 user ? (
                     children
                 ) : (
-                    // Si no hay usuario logueado, redirigimos a la página de login
                     <Navigate
                         to="/login"
                         state={{ from: rest.location }}

@@ -1,4 +1,3 @@
-// Middleware para verificar si un usuario es administrador
 const isAdmin = (req, res, next) => {
   if (req.user && req.user.role === 'admin') {
     next();
