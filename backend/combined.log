@@ -72,3 +72,13 @@ error: Register Error {"email":"franpizzichini@gmail.com","error":"E11000 duplic
 warn: Login attempt failed {"info":{"message":"User not found"},"timestamp":"2024-05-14T18:34:22.790Z"}
 warn: Login attempt failed {"info":{"message":"User not found"},"timestamp":"2024-05-14T18:34:42.627Z"}
 info: User registered successfully {"email":"franpizzichini@gmail.com","timestamp":"2024-05-14T18:34:54.781Z"}
+info: User registered successfully {"email":"sASsa@gmail.com","timestamp":"2024-05-15T17:26:10.933Z"}
+info: User registered successfully {"email":"pruebASDADa3@gmail.com","timestamp":"2024-05-15T17:26:35.084Z"}
+info: User registered successfully {"email":"dasda@das.com","timestamp":"2024-05-15T17:30:34.090Z"}
+info: User registered successfully {"email":"prasdasdueba3@gmail.com","timestamp":"2024-05-15T17:31:52.906Z"}
+info: User registered successfully {"email":"dasdasdean@gmail.com","timestamp":"2024-05-15T17:34:36.495Z"}
+info: User registered successfully {"email":"prueasdasdadba3@gmail.com","timestamp":"2024-05-15T17:34:52.941Z"}
+info: User registered successfully {"email":"asdaddasdad@gmail.com","timestamp":"2024-05-15T17:37:16.161Z"}
+info: User registered successfully {"email":"pruesadsadadba3@gmail.com","timestamp":"2024-05-15T17:45:30.396Z"}
+warn: Login attempt failed {"info":{"message":"Invalid credentials"},"timestamp":"2024-05-15T17:58:29.754Z"}
+info: User registered successfully {"email":"admin@admin.com","timestamp":"2024-05-15T18:02:52.832Z"}

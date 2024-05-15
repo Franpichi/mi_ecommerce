@@ -18,14 +18,24 @@ function Home() {
   }, []);
 
   const addToCart = (product) => {
+    if (!product) {
+      console.error('Product is not available');
+      return;
+    }
     dispatch({
       type: 'ADD_ITEM',
-      payload: product
+      payload: {
+        id: product._id,
+        name: product.name,
+        price: product.price,
+        imageUrl: product.imageUrl,
+        quantity: 1 // Asegurándonos de incluir la cantidad
+      }
     });
   };
 
   return (
-      <div className="flex-container" style={{ paddingLeft: '120px' }}>
+    <div className="flex-container" style={{ paddingLeft: '120px' }}>
       {products.map(product => (
         <div key={product._id} className="product-item">
           <h3 className='title'>{product.name}</h3>
