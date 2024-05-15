@@ -19,6 +19,11 @@ import AdminPanel from './components/AdminPanel';
 import SomePrivateComponent from './components/SomePrivateComponent';
 import CheckoutForm from './components/CheckoutForm';
 import PaymentStatus from './components/PaymentStatus'; // Asegúrate de importar PaymentStatus
+import LoginAdmin from './components/LoginAdmin';
+import UserManagement from './components/UserManagement';
+import ProductManagement from './components/ProductManagement';
+
+
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
@@ -37,7 +42,10 @@ function App() {
                 <Route path="/product" element={<ProductList />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/admin" element={<AdminPanel />} />
+                <Route path="/login-admin" element={<LoginAdmin />} />
+                <Route path="/admin-panel" element={<AdminPanel />} />
+                <Route path="/admin/users" element={<UserManagement />} />
+                <Route path="/admin/products" element={<ProductManagement />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/checkout" element={
                   <Elements stripe={stripePromise}>

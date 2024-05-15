@@ -9,8 +9,10 @@ const cors = require('cors');
 const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const userRoutes = require('./routes/userRoutes');
-const paymentRoutes = require('./routes/paymentRoutes');
 const errorHandler = require('./middleware/errorHandler');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const adminUserController = require('./controllers/adminController');
+const User = require('./models/User');
 const sgMail = require('@sendgrid/mail');
 
 const app = express();
@@ -36,7 +38,7 @@ app.use(session({
   secret: 'secret',
   resave: false,
   saveUninitialized: false,
-  store: new MongoStore({ mongoUrl: process.env.MONGO_URI })
+  store: MongoStore.create({ mongoUrl: process.env.MONGO_URI })
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -46,7 +48,6 @@ require('./config/passport')(passport);
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/payment', paymentRoutes);
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 app.post('/send-email', async (req, res) => {
@@ -86,11 +87,16 @@ app.post('/api/payment', async (req, res) => {
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
-      amount: Math.round(amount * 100),
+      amount: Math.round(amount * 100), // Stripe expects the amount in cents
       currency: 'usd',
       payment_method: paymentMethodId,
       confirmation_method: 'manual',
-      confirm: true
+      confirm: true,
+      return_url: 'http://localhost:3000/payment-status', // Asegúrate de cambiar esto en producción
+      automatic_payment_methods: {
+        enabled: true,
+        allow_redirects: 'never'
+      }
     });
 
     if (paymentIntent.status === 'requires_action') {

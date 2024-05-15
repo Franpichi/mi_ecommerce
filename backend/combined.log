@@ -82,3 +82,4 @@ info: User registered successfully {"email":"asdaddasdad@gmail.com","timestamp":
 info: User registered successfully {"email":"pruesadsadadba3@gmail.com","timestamp":"2024-05-15T17:45:30.396Z"}
 warn: Login attempt failed {"info":{"message":"Invalid credentials"},"timestamp":"2024-05-15T17:58:29.754Z"}
 info: User registered successfully {"email":"admin@admin.com","timestamp":"2024-05-15T18:02:52.832Z"}
+info: User registered successfully {"email":"adasdsadsamin@admin.com","timestamp":"2024-05-15T20:55:07.611Z"}
