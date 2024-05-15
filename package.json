@@ -9,6 +9,8 @@
     "concurrently": "^8.2.2"
   },
   "dependencies": {
+    "@stripe/react-stripe-js": "^2.7.1",
+    "@stripe/stripe-js": "^3.4.0",
     "path-browserify": "^1.0.1",
     "react-router-dom": "^6.23.0"
   }

@@ -31,6 +31,9 @@ export const AuthProvider = ({ children }) => {
                 localStorage.setItem('user', JSON.stringify({ ...data.user, email }));
                 localStorage.setItem('token', data.token);
                 toast.success('Sesión iniciada correctamente');
+                
+                // Redirigir a la ruta correcta después de iniciar sesión
+                navigate(data.role === 'admin' ? '/admin-panel' : '/home');
                 return data.user; // Devuelve el usuario completo
             } else {
                 toast.error(data.message || 'Acceso denegado');

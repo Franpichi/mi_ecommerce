@@ -12,23 +12,20 @@ import Home from './components/Home';
 import ProductDetails from './components/ProductDetails';
 import Cart from './components/Cart';
 import Login from './components/Login';
-import LoginAdmin from './components/LoginAdmin';
 import ProductList from './components/ProductList';
 import Register from './components/Register';
 import PrivateRoute from './components/PrivateRoute';
 import AdminPanel from './components/AdminPanel';
 import SomePrivateComponent from './components/SomePrivateComponent';
 import CheckoutForm from './components/CheckoutForm';
-import PaymentStatus from './components/PaymentStatus';
-import UserManagement from './components/UserManagement'; // Importa UserManagement
-import ProductManagement from './components/ProductManagement'; // Importa ProductManagement
+import PaymentStatus from './components/PaymentStatus'; // Asegúrate de importar PaymentStatus
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 function App() {
   return (
     <Router>
-      <NavigationProvider>
+      <NavigationProvider> 
         <CartProvider>
           <AuthProvider>
             <Header />
@@ -40,10 +37,7 @@ function App() {
                 <Route path="/product" element={<ProductList />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/login-admin" element={<LoginAdmin />} />
-                <Route path="/admin-panel" element={<AdminPanel />} />
-                <Route path="/admin/users" element={<UserManagement />} />
-                <Route path="/admin/products" element={<ProductManagement />} />
+                <Route path="/admin" element={<AdminPanel />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/checkout" element={
                   <Elements stripe={stripePromise}>
@@ -55,7 +49,7 @@ function App() {
                     <SomePrivateComponent />
                   </PrivateRoute>
                 } />
-                <Route path="/payment-status" element={<PaymentStatus />} />
+                <Route path="/payment-status" element={<PaymentStatus />} />  // Ruta para PaymentStatus
               </Routes>
             </div>
             <Footer />

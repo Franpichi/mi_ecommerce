@@ -9,8 +9,8 @@ const cors = require('cors');
 const productRoutes = require('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const userRoutes = require('./routes/userRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
 const errorHandler = require('./middleware/errorHandler');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const sgMail = require('@sendgrid/mail');
 
 const app = express();
@@ -46,6 +46,7 @@ require('./config/passport')(passport);
 app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/payment', paymentRoutes);
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 app.post('/send-email', async (req, res) => {
@@ -102,6 +103,27 @@ app.post('/api/payment', async (req, res) => {
   } catch (error) {
     console.error('Error al procesar el pago:', error);
     res.status(500).json({ success: false, error: 'Error al procesar el pago. ' + error.message });
+  }
+});
+
+app.get('/api/admin/users', adminUserController.listUsers);
+app.delete('/api/admin/user/:id', adminUserController.deleteUser);
+
+app.post('/api/users/login', async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(401).json({ message: 'User not found' });
+    }
+    const isMatch = await user.comparePassword(password);
+    if (!isMatch) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+    res.status(200).json({ role: user.role === 'admin' ? 'admin' : 'user' });
+  } catch (error) {
+    console.error('Login error:', error);
+    res.status(500).json({ message: 'Error during login' });
   }
 });
 
