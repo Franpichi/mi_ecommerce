@@ -1,72 +1,78 @@
-# Getting Started with Create React App
+# Mi_Ecommerce HOROLOGIUM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un proyecto de eCommerce construido con Node.js, Express, React y MongoDB.
 
-## Available Scripts
+## Requisitos
 
-In the project directory, you can run:
+- Node.js (versión 18.18.2 o superior)
+- npm (versión 9.x o superior)
+- MongoDB
 
-### `npm start`
+## Instalación
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Clonar el Repositorio
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clona este repositorio:
+   ```sh
+   git clone https://github.com/Franpichi/mi_ecommerce
+   cd mi_ecommerce
 
-### `npm test`
+2. Instala dependencias:
+    cd backend
+        npm install
+    cd frontend
+        npm install
+    
+## Configuracion
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Crear un archivo .env
+    Adjunto el archivo .env en el cuerpo de la presentacion
+    cd backend
+        .env
+            MONGO_URI=
+            NODE_ENV=
+            JWT_SECRET=
+            STRIPE_SECRET_KEY=
+            SENDGRID_API_KEY=
+    cd frontend
+        .env
+            REACT_APP_STRIPE_PUBLIC_KEY=
 
-### `npm run build`
+## Ejecucion
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+    npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencias
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. backend
+    @sendgrid/mail: ^8.1.3
+    bcrypt: ^5.1.1
+    connect-mongo: ^5.1.0
+    dotenv: ^16.4.5
+    express: ^4.19.2
+    express-handlebars: ^7.1.2
+    express-session: ^1.18.0
+    jsonwebtoken: ^9.0.2
+    mongoose: ^8.3.4
+    multer: ^1.4.5-lts.1
+    passport: ^0.7.0
+    passport-jwt: ^4.0.1
+    passport-local: ^1.0.0
+    stripe: ^15.5.0
+    
+2. frontend
+    @stripe/react-stripe-js: ^2.7.1
+    @stripe/stripe-js: ^3.4.0
+    @testing-library/jest-dom: ^5.17.0
+    @testing-library/react: ^13.4.0
+    @testing-library/user-event: ^13.5.0
+    axios: ^1.6.8
+    react: ^18.3.1
+    react-dom: ^18.3.1
+    react-router-dom: ^6.23.1
+    react-scripts: "5.0.1"
+    react-toastify: ^10.0.5
+    web-vitals: ^2.1.4
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
+    

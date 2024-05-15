@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #EBEBEB;
-
 }
 
 code {
@@ -23,7 +22,6 @@ code {
   background-color: #DDDDDD;
   color: black;
   text-align: center;
-
 }
 
 .footer-content p {
@@ -45,7 +43,6 @@ code {
   margin-top: 10px;
 }
 
-/* src/styles/global.css */
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -59,15 +56,12 @@ code {
   width: 300px;
 }
 
-
 .title {
   text-decoration: none;
   color: black;
   font-weight: bold;
   font-size: larger;
 }
-
-
 
 .logo img {
   height: 50px;
@@ -83,11 +77,11 @@ code {
   color: #333;
 }
 
-.main{
+.main {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 80px;
-  }
+}
 
 .main-nav {
   width: 100%;
@@ -185,29 +179,27 @@ code {
   box-shadow: none;
   transform: translateY(0);
 }
+
 .cart-img {
-  margin-top: 8px; /* Ajusta este valor según tus necesidades */
+  margin-top: 8px;
 }
-/* En tu archivo CSS */
+
 .title, .text {
   text-decoration: none;
   color: black;
   font-weight: bold;
   font-size: larger;
-  font-family: 'Lobster', cursive; /* Aplica la fuente Lobster */
+  font-family: 'Lobster', cursive;
 }
 
 .horologium-title {
-  font-family: 'Lobster', cursive; /* Fuente Lobster */
-  font-size: 2.5rem; /* Ajusta el tamaño de la fuente según tu preferencia */
-  font-weight: 400; /* Peso de la fuente para un aspecto más elegante */
-  text-align: center; /* Centrar el texto */
-  color: #333; /* Ajusta el color según tu preferencia */
+  font-family: 'Lobster', cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
 }
 
-/* src/styles/global.css */
-
-/* Contenedor principal para centrar el formulario */
 .login-container {
   display: flex;
   flex-direction: column;
@@ -215,94 +207,74 @@ code {
   justify-content: center;
 }
 
-/* Estilo del formulario */
 .login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Estilo de las etiquetas del formulario */
 .login-label {
-  width: 100%; /* Para que los inputs ocupen todo el ancho disponible */
+  width: 100%;
   text-align: left;
 }
 
-/* Estilo de los inputs del formulario */
 .login-input {
-  width: 100%; /* Para que el input ocupe todo el ancho del contenedor */
+  width: 100%;
   border: 2px solid black;
-  box-sizing: border-box; /* Incluye el padding dentro del ancho */
+  box-sizing: border-box;
 }
 
-/* Estilo del botón */
-.button-28 {
-  margin-top: 20px;
-}
-/* src/styles/global.css */
-
-/* Contenedor principal para centrar el formulario */
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Ajusta según tu diseño */
+  min-height: 100vh;
 }
 
-/* Estilo del formulario */
 .login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Estilo de las etiquetas del formulario */
 .login-label {
   margin-bottom: 15px;
-  width: 100%; /* Para que los inputs ocupen todo el ancho disponible */
+  width: 100%;
   text-align: left;
 }
 
-/* Estilo de los inputs del formulario */
 .login-input {
-  width: 100%; /* Para que el input ocupe todo el ancho del contenedor */
+  width: 100%;
   padding: 8px;
-  margin-top: 5px; /* Espacio entre el label y el input */
-  box-sizing: border-box; /* Incluye el padding dentro del ancho */
+  margin-top: 5px;
+  box-sizing: border-box;
 }
 
-/* Estilo del botón */
 .button-28 {
   margin-top: 20px;
 }
 
-/* Estilo de los items del carrito */
 .cart-item {
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* Contenedor para cuando el carrito está vacío */
 .empty-cart {
   text-align: center;
 }
 
-/* Estilo para las acciones del carrito */
 .cart-actions {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 10px; /* Espacio entre los botones */
+  gap: 10px;
 }
 
-/* Para evitar que los botones del carrito suban */
 .footer-space {
   margin-top: auto;
 }
-/* src/styles/global.css */
 
-/* Contenedor del formulario de checkout */
 .checkout-form {
   display: flex;
   flex-direction: column;
@@ -312,7 +284,6 @@ code {
   margin: 0 auto;
 }
 
-/* Estilo del CardElement */
 .StripeElement {
   width: 100%;
   padding: 10px;
@@ -320,4 +291,3 @@ code {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
